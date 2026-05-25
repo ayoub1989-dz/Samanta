@@ -1,0 +1,23 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "functions": {
+    "api/proxy.js": {
+      "maxDuration": 300
+    }
+  },
+  "routes": [
+    {
+      "src": "/ws/(.*)",
+      "dest": "/api/proxy.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/proxy.js"
+    }
+  ],
+  "env": {
+    "UUID": "your-uuid-here",
+    "WS_PATH": "/ws/vless"
+  }
+}
