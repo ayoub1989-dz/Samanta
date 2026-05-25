@@ -1,0 +1,11 @@
+{
+  "name": "vercel-v2ray-vless-ws",
+  "version": "1.0.0",
+  "description": "VLESS + WebSocket proxy on Vercel (by Grok)",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
